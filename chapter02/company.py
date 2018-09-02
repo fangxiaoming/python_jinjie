@@ -33,6 +33,8 @@ class MyVector(object):
 first_vec = MyVector(1,2)
 second_vec = MyVector(2,2)
 print(first_vec+second_vec)
+
+
 # company1= company[:2]
 #
 # print(len(company))
