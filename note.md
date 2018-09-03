@@ -186,3 +186,70 @@ array和list的一个重要区别， array只能存放指定的数据类型,但�
 
 ![1535945190160](F:\python_jinjie\imgs\1535945190160.png)
 
+
+
+### 第六章 深入python的set和dict
+
+#### 6.2 dict的常用方法
+
+深拷贝和浅拷贝
+
+#### 6.3 dict的子类
+
+defaultdict
+
+#### 6.4 set和frozenset
+
+frozenset 不可变集合 是不可变类型,可以作为dict的key
+
+set 无序,不重复集合
+
+set的性能很高
+
+集合的差,交,并操作
+
+#### 6.5 dict和set的实现原理
+
+dict查找的性能远远大于list
+
+在list中随着list数据的增大 查找时间会增大
+
+在dict中查找元素的时间不会随着dict的增加而增加
+
+![1535961216258](F:\python_jinjie\imgs\1535961216258.png)
+
+1.  dict的key或者set的值 都必须是可以hash的
+  不可变对象 都是可hash的， str， frozenset， tuple，自己实现的类 `__hash__`
+2.  dict的内存花销大，但是查询速度快， 自定义的对象 或者python内部的对象都是用dict包装的
+3.  dict的存储顺序和元素添加顺序有关
+4.  添加数据有可能改变已有数据的顺序 
+
+### 第七章 对象引用 可变性和垃圾回收
+
+#### 7.1 python中的变量是什么
+
+python和java中的变量本质不一样，python的变量实质上是一个指针 int str， 便利贴
+
+#### 7.2 ==和is的区别
+
+is 判断的是两个变量的id
+
+== 判断值是否相等
+
+![1535975032792](F:\python_jinjie\imgs\1535975032792.png)
+
+#### 7.3 del语句和垃圾回收
+
+cpython中垃圾回收的算法是采用 **引用计数**
+
+![1535975288779](F:\python_jinjie\imgs\1535975288779.png)
+
+#### 7.4 一个经典的参数错误
+
+
+
+![1535975644476](F:\python_jinjie\imgs\1535975644476.png)
+
+![1535975627520](F:\python_jinjie\imgs\1535975627520.png)
+
+com2 和 com3共用了同一个默认的staff list
